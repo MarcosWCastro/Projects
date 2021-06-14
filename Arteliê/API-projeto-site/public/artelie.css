@@ -1,0 +1,375 @@
+body, html {
+    margin: 0px;
+    font-family:'Arial Narrow Bold', sans-serif;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #a29bfe;
+    padding: 30px;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+}
+
+.titulo {
+    color: white;
+    margin: 0px;
+}
+
+.style {
+    color: #6c5ce7;
+}
+
+.navbar {
+    float: right;
+    color: white;
+    margin: 10px 20px 0px 20px;
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin: 20px;
+}
+
+.destaque {
+    border-radius: 15px;
+    border: 10px solid #6c5ce7;
+    background-color: #6c5ce7;
+}
+
+/* banner */
+
+.home {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.perfil {
+    padding: 100px;
+    padding-top: 214px;
+    background-color: #a29bfe;
+    color: white;
+    width: 50%;
+}
+
+.destaque2 {
+    color: #6c5ce7;
+    font-size: 40px;
+}
+
+button {
+    border-radius: 15px;
+    border: 10px solid #6c5ce7;
+    background-color: #6c5ce7;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.fale_conosco {
+    border-radius: 15px;
+    border: 10px solid #6c5ce7;
+    background-color: #6c5ce7;
+    width: 130px;
+    font-size: 15px;
+    color: white;
+    outline: none;
+}
+
+.image {
+    background-color: #a29bfe;
+    width: 50%;
+    background-image: url(imagens/icons/art_museum.png);
+    background-size: 600px;
+    background-position-x: 10px;
+    background-position-y: 210px;
+    background-repeat: no-repeat;
+}
+
+.social {
+    background-color: #a29bfe;
+    padding-left: 650px;
+    display: flex;
+}
+
+.social_icon {
+    margin-right: 30px;
+    width: 40px;
+    margin-bottom: 23px;
+    padding-bottom: 10px;
+}
+
+.social_icon:hover {
+    border-bottom: 5px solid #6c5ce7;
+}
+
+/* stacks */
+
+.artista {
+    padding: 120px 100px 300px 100px;
+    background-color: #a29bfe;
+    height: 500px;
+}
+
+.artista a {
+    color: black;
+}
+
+.artistas1 {
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.artistas2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boxArtista {
+    background-color: #dfe6e9;
+    height: 146px;
+    width: 250px;
+    border-bottom: 20px solid #6c5ce7;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.destaq {
+    color: #6c5ce7;
+}
+
+.boxArtista:hover {
+    height: 250px;
+}
+
+.boxArtista img {
+    border-radius: 15px;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+.boxArtista:hover img {
+    opacity: 1.0;
+}
+
+/* Projects */
+
+.categoria {
+    background-color: #a29bfe;
+}
+
+.categoria h3 {
+    color: #6c5ce7;
+    background-color: #dfe6e9;
+}
+
+.categoria img {
+    width: 250px;
+}
+
+.container-categoria1 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 100px 100px 100px;
+}
+
+.container-categoria2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 100px 80px 100px;
+}
+
+.categ1 {
+    background-image: url(imagens/obras/renascentista.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 250px;
+    border-bottom: 20px solid #6c5ce7;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.categ2 {
+    background-image: url(imagens/obras/barroco.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 250px;
+    border-bottom: 20px solid #6c5ce7;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.categ3 {
+    background-image: url(imagens/obras/cubismo.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 250px;
+    border-bottom: 20px solid #6c5ce7;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.categ4 {
+    background-image: url(imagens/obras/pop-art.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 250px;
+    border-bottom: 20px solid #6c5ce7;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.categ5 {
+    background-image: url(imagens/obras/arte-urbana.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 250px;
+    border-bottom: 20px solid #6c5ce7;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.categ6 {
+    background-image: url(imagens/obras/hiperRealismo.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 250px;
+    border-bottom: 20px solid #6c5ce7;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;    
+}
+
+/* artistas page */
+
+.setaBack {
+    background-color: #6c5ce7;
+    padding: 5px;
+    padding-bottom: 0px;
+    font-size: xx-large;
+    font-weight: 900;
+    display: flex;
+    justify-content: end;
+}
+
+.nomeArtist {
+    background-color: #a29bfe;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.nomeArtist h4 {
+    margin: 10px;
+}
+
+.fotoArtist {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    padding-bottom: 20px;
+    background-color: #a29bfe;
+}
+
+.fotoArtist img {
+    width: 200px;
+    height: 220px;
+    border: 8px solid white;
+    border-radius: 10px;
+}
+
+.obras {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6c5ce7;
+    height: 580px;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.obras img {
+    width: 150px;
+    height: 150px;
+    border: 8px solid white;
+    border-radius: 10px;
+}
+
+.titulo_obra {
+    background-color: #6c5ce7;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_obra h4 {
+    margin: 0px;
+    font-size: xx-large;
+    font-weight: 900;
+    color: white;
+}
+
+.obras p {
+    color: white;
+}
+
+.container_obra {
+    justify-content: center;
+}
+
+.biografia {
+    padding: 20px 120px 20px 120px;
+    background-color: #a29bfe;
+}
+
+.setaVoltar {
+    display: flex;
+    justify-content: center;
+    background-color: #6c5ce7;
+    color: white;
+}
+
+.setaVoltar h1 {
+    margin: 0px;
+}
+
+.video {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 650px;
+}

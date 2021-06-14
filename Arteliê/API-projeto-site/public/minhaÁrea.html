@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minhaÁrea.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <title>Minha Área</title>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <div class="container">
+            <a href="index.html">
+                <h1 class="titulo"><span class="style">Art</span>eliê<span class="style">.</span></h1>
+            </a>
+            <ul class="navbar">
+                <li><a id="id_home" class="destaque">Home</a></li>
+                <li><a id="id_games" href="games.html">Minigames</a></li>
+                <li><a id="id_obraDia" href="obraDoDia.html">Obra do dia</a></li>
+                <li><a id="musica" href="musicas.html">Músicas</a></li>
+                <li><a id="feed" href="feed.html">Feed</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner3" id="banner3">
+        <div class="container">
+
+            <div class="videos">
+                <iframe class="videoPlay" width="560" height="315" src="https://www.youtube.com/embed/EH0x6Yw410g"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br><br><br><br>
+                <iframe class="videoPlay" width="560" height="315" src="https://www.youtube.com/embed/RdNvpq4pL3M"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br><br><br><br>
+                <iframe class="videoPlay" width="560" height="315" src="https://www.youtube.com/embed/_T2AGbLUXGY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br><br><br><br>
+                <iframe class="videoPlay" width="560" height="315" src="https://www.youtube.com/embed/55DUMLJ_Syo"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br><br><br><br>
+                <iframe class="videoPlay" width="560" height="315" src="https://www.youtube.com/embed/dU4YnSCL1xI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br><br><br><br>
+                <iframe class="videoPlay" width="560" height="315" src="https://www.youtube.com/embed/aas1EdeoYL0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br><br><br><br>
+                <iframe class="videoPlay" width="560" height="315" src="https://www.youtube.com/embed/9NStWkXQ6rM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner" id="banner1">
+        <div class="container">
+            <div class="grafico">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="banner2" id="banner2">
+        <div class="container">
+            <div class="box-item">
+                <h3>Museu Paulista</h3>
+                <a href="http://www.mp.usp.br/"><img src="imagens/icons/museuPaulista.jpg"></a>
+                <p>Rua Brigadeiro Jordão, 149 <br> Ipiranga, São Paulo - SP</p>
+            </div>
+
+            <div class="box-item">
+                <h3>Pinacoteca de São Paulo</h3>
+                <a href="http://pinacoteca.org.br/"><img src="imagens/icons/pinacoteca.jpg"></a>
+                <p>Praça da Luz, 2 <br> Luz, São Paulo - SP</p>
+            </div>
+
+            <div class="box-item">
+                <h3>Museu Catavento</h3>
+                <a href="http://www.cataventocultural.org.br/"><img src="imagens/icons/catavento.jpg"></a>
+                <p>Av. Mercúrio, s/n <br> Pq. Dom Pedro II, São Paulo - SP</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>Criado por
+                <a href="https://github.com/MarcosWCastro">Marcos Castro ©</a>
+                <button onclick="voltarTopo()">Voltar ao topo</button>
+            </h4>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var ctx = document.getElementById('myChart');
+
+    var meuGrafico = new Chart(ctx, {
+        type: 'bar',
+
+        data: {
+            labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+            datasets: [{
+                    label: "Renascentista",
+                    data: [150, 270, 414, 315, 610, 780, 1020, 1270, 1450, 1700, 1510, 1800],
+                    borderWidth: 2,
+                    borderColor: '#ff1908',
+                    backgroundColor: 'transparent',
+                },
+
+                {
+                    type: 'bar',
+                    label: "Barroco",
+                    data: [370, 210, 90, 280, 410, 750, 1050, 1320, 1670, 1415, 1720, 1350],
+                    borderWidth: 2,
+                    borderColor: '#008000',
+                    backgroundColor: 'transparent'
+                },
+
+
+                {
+                    type: 'bar',
+                    label: "Pop Art",
+                    data: [170, 310, 190, 260, 430, 550, 1100, 1210, 890, 915, 1120, 910],
+                    borderWidth: 2,
+                    borderColor: '#006c80',
+                    backgroundColor: 'transparent'
+                },
+            ]
+        },
+
+        options: {
+
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Visitas de usuários por categoria",
+                position: 'top',
+            },
+            legend: {
+                display: true,
+                reverse: true,
+                position: 'bottom'
+            },
+            layout: {
+                padding: {
+                    left: 50,
+                    top: 50
+                },
+
+            }
+        }
+    })
+
+    function voltarTopo() {
+        window.scrollTo(0, 0);
+    }
+</script>

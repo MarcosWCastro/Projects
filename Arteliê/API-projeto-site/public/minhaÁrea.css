@@ -1,0 +1,360 @@
+body,
+html {
+    margin: 0px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    overflow-x: hidden;
+    background-color: #a29bfe;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    background-color: #a29bfe;
+    padding: 30px;
+    width: 100%;
+    position: fixed;
+}
+
+.container {
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo {
+    color: white;
+    margin: 0px;
+}
+
+.style {
+    color: #6c5ce7;
+}
+
+.navbar {
+    float: right;
+    color: white;
+    margin: 10px 20px 0px 20px;
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin: 20px;
+}
+
+.destaque {
+    border-bottom: 3px solid #6c5ce7;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub_header img {
+    width: 30px;
+}
+
+.sub_header {
+    width: 100%;
+    position: fixed;
+    padding-left: 98%;
+}
+
+/* chartjs */
+.container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+canvas {
+    background-color: white;
+}
+
+.grafico {
+    width: 50%;
+    margin: 70px 0px 0px 100px;
+}
+
+.imagem {
+    margin: 70px 100px 100px 100px;
+}
+
+.imagem img {
+    width: 600px;
+}
+
+.banner {
+    background-color: #a29bfe;
+    background-color: white;
+    border-radius: 50px;
+    height: 514px;
+    margin: 150px 100px 100px 100px;
+    background-image: url(imagens/icons/undraw_monster_artist_2crm.png);
+    background-repeat: no-repeat;
+    background-position-x: 800px;
+    background-position-y: 100px;
+    background-size: 500px;
+}
+
+.banner h1 {
+    margin: 0%;
+    font-size: 50px;
+    padding-top: 100px;
+    margin-top: 0px;
+}
+
+.banner h3 {
+    color: #555555;
+}
+
+.banner2 {
+    background-color: #a29bfe;
+    background-color: white;
+    border-radius: 50px;
+    height: 514px;
+    margin: 150px 100px 100px 100px;
+}
+
+.banner3 {
+    background-color: #a29bfe;
+    background-color: white;
+    border-radius: 50px;
+    height: 514px;
+    margin: 150px 100px 100px 100px;
+    background-image: url(imagens/icons/undraw_videographer_nnc7.png);
+    background-repeat: no-repeat;
+    background-position-x: 720px;
+    background-position-y: 70px;
+    background-size: 600px;
+    overflow: auto;
+    display: flex;
+    justify-content: right;
+}
+
+.videos {
+    display: grid;
+    padding: 50px;
+}
+
+.videoPlay {
+    border: 5px outset #6c5ce7;
+    border-radius: 20px;
+}
+
+.banner2 img {
+    height: 100px;
+}
+
+.banner3 img {
+    height: 100px;
+}
+
+
+.box-item {
+    float: left;
+    text-align: center;
+    width: 27%;
+    padding: 10% 3% 3% 3%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #6c5ce7;
+    height: 90px;
+
+}
+
+.footer h4 {
+    margin: 0px;
+    padding-top: 40px;
+    font-weight: 100;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover {
+    color: #6c5ce7;
+}
+
+button {
+    background-color: #a29bfe;
+    border: 1px solid #a29bfe;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* minigames */
+
+.gamesOptions {
+    background-color: #a29bfe;
+    background-color: white;
+    border-radius: 50px;
+    height: 514px;
+    margin: 150px 100px 100px 100px;
+    background-image: url(imagens/icons/undraw_gaming_6oy3.png);
+    background-repeat: no-repeat;
+    background-position-x: 800px;
+    background-position-y: 50px;
+    background-size: 500px;
+}
+
+.gamesOptions button {
+    background-color: rgb(34, 167, 34);
+    margin: 30px;  
+    width: 200px;
+    height: 70px;
+    border-radius: 20px;
+    border-bottom: 5px solid rgb(5, 131, 5);
+    border-right: 5px solid rgb(5, 131, 5);
+    font-size: 20px;
+    color: white;
+}
+
+.btnOptions {
+    width: 50%;
+    margin: 180px 0px 0px 180px;
+}
+
+/* obra do dia */
+
+.banner_obra {
+    background-color: #a29bfe;
+    background-color: white;
+    border-radius: 50px;
+    height: 514px;
+    margin: 150px 100px 100px 100px;
+    background-image: url(imagens/icons/undraw_making_art_759c.png);
+    background-repeat: no-repeat;
+    background-position-x: 800px;
+    background-position-y: 50px;
+    background-size: 500px;
+}
+
+.random_obra {
+    width: 498px;
+    height: 370px;
+    border: 5px solid #6c5ce7;
+    border-radius: 20px;
+}
+
+/* musicas */
+
+.banner_music {
+    background-color: #a29bfe;
+    background-color: white;
+    border-radius: 50px;
+    height: 514px;
+    margin: 150px 100px 100px 100px;
+    background-image: url(imagens/icons/undraw_compose_music_ovo2.png);
+    background-repeat: no-repeat;
+    background-position-x: 700px;
+    background-position-y: 50px;
+    background-size: 600px;
+    overflow: auto;
+}
+
+.myMusic {
+    width: 50%;
+    margin: 0px 0px 0px 100px;
+}
+
+.play {
+    color: #6c5ce7;
+    font-size: 35px;
+}
+
+.audioplay {
+    height: 40px;
+    width: 250px;
+    background-color: white;
+}
+
+/* FEED */
+
+.bannerFeed {
+    background-color: #a29bfe;
+    background-color: white;
+    border-radius: 50px;
+    height: 514px;
+    margin: 150px 100px 100px 100px;
+    background-image: url(imagens/icons/undraw_my_feed_inj0.png);
+    background-repeat: no-repeat;
+    background-position-x: 700px;
+    background-position-y: 50px;
+    background-size: 600px;
+    overflow: auto;
+}
+
+.myFeed {
+    width: 50%;
+    margin: 0px 0px 0px 50px;
+}
+
+.mensagens {
+    margin: 50px 50px 0px 50px;
+    height: 380px;
+    overflow-y: scroll;
+}
+
+.escrever {
+    display: flex;
+    justify-content: left;
+}
+
+.ipt_mensagem {
+    width: 400px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #6c5ce7;
+    outline: none;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.btn_EnvMensagem {
+    background-color: #6c5ce7;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #6c5ce7;
+    outline: none;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.publicacao {
+    background-color: #a29bfe;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 450px;
+}
+
+.publicacao2 {
+    background-color: #c8c7d8;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 450px;
+}
+
+.nome {
+    padding: 5px;
+    color: #6c5ce7;
+}
+
+.descricao {
+    padding: 5px;
+    color: white;
+}

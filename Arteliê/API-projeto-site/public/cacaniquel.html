@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caça-níquel</title>
+</head>
+
+<style>
+    body,
+    html {
+        padding: 0px 0px 0px 260px;
+        font-family: 'Arial Narrow Bold', sans-serif;
+        background-color: #afacdb;
+    }
+
+    .card {
+        margin-top: 20px;
+        padding: 20px;
+        width: 450px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 13px 8px 8px rgb(73, 72, 72);
+    }
+
+    .divImgs {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    select {
+        border: 1px solid #6c5ce7;
+    }
+
+    .btn {
+        background-color: rgb(53, 187, 53);
+        color: white;
+        width: 160px;
+        height: 40px;
+        margin: 10px;
+        margin-left: 150px;
+        font-size: 15px;
+        border-radius: 10px;
+        border-bottom: 3px solid rgb(13, 104, 13);
+        border-right: 3px solid rgb(13, 104, 13);
+        border-top: none;
+        border-left: none;
+    }
+
+    h1 {
+        color: #6c5ce7;
+        margin-left: 80px;
+    }
+
+    span {
+        margin-left: 90px;
+    }
+
+    .miniBar {
+        background-color: rgb(53, 187, 53);
+        color: white;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        border-bottom: 3px solid rgb(13, 104, 13);
+        border-right: 3px solid rgb(13, 104, 13);
+        border-top: none;
+        border-left: none;
+    }
+
+    .miniBar:hover {
+        cursor: pointer;
+    }
+
+    .btn_nav {
+        margin: 20px 0px 20px 140px;
+    }
+
+    #Pts {
+        display: flex;
+        justify-content: center;
+    }
+
+    h3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+
+<body>
+    <div class="btn_nav">
+        <a href="games.html"><button class="miniBar">Voltar</button></a>
+        <a href="minhaÁrea.html"><button class="miniBar">Minha Área</button></a>
+    </div>
+    <div class="card">
+        <h1>Caça-níquel Arteliê</h1>
+        <h3>Instruções</h3>
+        <p><b>1 acerto</b> = R$1,50</p>
+        <p><b>2 acertos</b> = R$5,00</p>
+        <p><b>3 acertos</b> = R$21,00</p>
+        <p><b>4 acertos</b> = R$50,00</p>
+        <br><br>
+        <span>Qual artista você escolhe? </span><select id="slct_artista">
+            <option value="0">Artistas</option>
+            <option value="Van Gogh">Van Gogh</option>
+            <option value="Frida">Frida</option>
+            <option value="Da Vinci">Da Vinci</option>
+            <option value="Monet">Monet</option>
+        </select><br><br><br>
+        <button class="btn" onclick="sortear()">Sortear</button>
+        <br><br>
+        <div class="divImgs">
+            <img id="img1">
+            <img id="img2">
+            <img id="img3">
+            <img id="img4">
+        </div>
+        <h3 id="Pts"></h3>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    var imgs = [img1, img2, img3, img4];
+    var artists = ['imagens/artistas/Vincent_van_Gogh.jpg', 'imagens/artistas/frida.jpg', 'imagens/artistas/leo.jpg',
+        'imagens/artistas/Claude_Monet.jpg'
+    ];
+    var artistas = ['Van Gogh', 'Frida', 'Da Vinci', 'Monet'];
+    var premios = [1.50, 5.00, 21.00, 50.00]
+    var correto = 0;
+
+    function sortear() {
+        var escolha = slct_artista.value;
+        correto = 0;
+
+        var ordem = [];
+
+        for (i = 0; i < imgs.length; i++) {
+            aleatorio = parseInt(Math.random() * 4) + 0;
+            imgs[i].src = artists[aleatorio];
+            ordem.push(artistas[aleatorio]);
+        }
+
+        for (i = 0; i < imgs.length; i++) {
+            if (ordem[i] == escolha) {
+                correto++;
+            }
+        }
+
+        Pts.innerHTML =
+        `Nesta rodada você ganhou R$ ${(correto > 0 ? premios[correto - 1] : 0).toFixed(2)}`;
+
+    }
+</script>

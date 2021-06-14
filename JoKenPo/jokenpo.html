@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jokenpo.js"></script>
+    <link rel="stylesheet" href="jokenpo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="card_um" class="card"  style="display: block;">
+        <h2>JoKenPo</h2>
+        <input id="ipt_play1" type="text" placeholder="Jogador 1">
+        <br>
+        <b>X</b>
+        <br>
+        <input id="ipt_play2" type="text" placeholder="Jogador 2">
+        <br>
+        <button onclick="jogar()">Jogar</button>
+        <br><br>
+        <a onclick="ajuda()">Instruções</a>
+    </div>
+
+    <div id="card_dois" class="card2" style="display: none;">
+        <b class="player" id="play1">Jogador 1</b> X <b class="player" id="play2">Jogador 2</b>
+        <br><br>
+        <span id="result"></span>
+        <span id="result2"></span>
+        <br><br>
+        <b id="jog1" class="placar">0</b>
+        <b class="placar">-</b>
+        <b id="jog2" class="placar">0</b>
+        <br><br>
+        <button id="bt_jogar" onclick="sortear()">Jokenpô</button>
+    </div>
+
+    <div id="card_tres" class="card3" style="display: none;"></div>
+
+    <div id="help" class="help" style="display: none;">
+        <h2>JoKenPô</h2>
+        <h4>Pedra ganha da tesoura (amassando-a ou quebrando-a). <br><br>
+            Tesoura ganha do papel (cortando-o). <br><br>
+            Papel ganha da pedra (embrulhando-a).</h4>
+            <img src="paper.png" style="width: 70px;">
+            <img src="scissors.png" style="width: 70px;">
+            <img src="stone.png" style="width: 70px;">
+            <u><h4>O primeiro jogador a atingir 5 pontos, é o vencedor.</h4></u>
+            <br>
+            <button onclick="voltar()">Voltar</button>
+    </div>
+    
+</body>
+
+</html>

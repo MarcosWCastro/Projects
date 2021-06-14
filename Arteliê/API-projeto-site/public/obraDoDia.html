@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minhaÁrea.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <title>Obra do dia</title>
+</head>
+
+<body onload="mudar()">
+    <div class="header" id="header">
+        <div class="container">
+            <a href="index.html">
+                <h1 class="titulo"><span class="style">Art</span>eliê<span class="style">.</span></h1>
+            </a>
+            <ul class="navbar">
+                <li><a id="id_home" href="minhaÁrea.html">Home</a></li>
+                <li><a id="id_games" href="games.html">Minigames</a></li>
+                <li><a id="id_obraDia" class="destaque">Obra do dia</a></li>
+                <li><a href="musicas.html">Músicas</a></li>
+                <li><a id="feed" href="feed.html">Feed</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner_obra">
+        <div class="container">
+            <div class="grafico">
+                <img id="imagem" class="random_obra" src="">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function mudar() {
+
+        var aleatorio = parseInt(Math.random() * 10 + 1);
+
+        if (aleatorio == 1) {
+            document.getElementById('imagem').src = "imagens/obras/rem1.jpg";
+        } else if (aleatorio == 2) {
+            document.getElementById('imagem').src = "imagens/obras/rem2.jpg";
+        } else if (aleatorio == 3) {
+            document.getElementById('imagem').src = "imagens/obras/rem3.jpg";
+        } else if (aleatorio == 4) {
+            document.getElementById('imagem').src = "imagens/obras/rem4.jpg";
+        } else if (aleatorio == 5) {
+            document.getElementById('imagem').src = "imagens/obras/rem5.jpg";
+        } else if (aleatorio == 6) {
+            document.getElementById('imagem').src = "imagens/obras/van1.jpg";
+        } else if (aleatorio == 7) {
+            document.getElementById('imagem').src = "imagens/obras/van2.jpg";
+        } else if (aleatorio == 8) {
+            document.getElementById('imagem').src = "imagens/obras/van3.jpg";
+        } else if (aleatorio == 9) {
+            document.getElementById('imagem').src = "imagens/obras/fri1.jpg";
+        } else {
+            document.getElementById('imagem').src = "imagens/obras/van5.jpg";
+        }
+    }
+</script>

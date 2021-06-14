@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/contador.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="contador.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" id="home">
+        <p class="titulo">Contador</p>
+        <p class="sub_titulo">Informe o tempo</p>
+        <input id="ipt_min" type="text" style="text-transform: uppercase; text-align: center;" placeholder="Min.">
+        <span class="pontos">:</span>
+        <input id="ipt_seg" type="text" style="text-transform: uppercase; text-align: center;" placeholder="Seg.">
+        <br>
+        <a href="#contador"><button onclick="inicio()">Iniciar contagem</button></a>
+    </div>
+
+
+    <div id="contador" class="corpo_contador">
+        <div class="header">
+            <div class="cont">
+                <a href="#home">
+                    <p>Contador</p>
+                </a>
+            </div>
+            <a href="#home"><div class="restart" onclick="reinicio()">
+                <p>Reiniciar</p>
+            </div></a>
+        </div>
+
+        <br><br>
+
+        <div class="titulo2">
+            <p id="msg">Faltam</p>
+        </div>
+
+        <div class="horario" id="horarios">
+            <div class="num"><span class="numero" id="minutes">00</span><br><span class="legenda">Minutos</span></div>
+            <div class="num"><span class="numero" id="seconds">00</span><br><span class="legenda">Segundos</span></div>
+            <div class="num"><span class="numero" id="thousandths">00</span><br><span class="legenda">Milésimos</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;"><audio id="music" src="7c953f895551d8ecc15e5391200e4bd4.mp3"></audio></div>
+</body>
+
+</html>

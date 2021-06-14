@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="login.css">
+  <title>Arteliê - Login</title>
+</head>
+
+<body>
+  <div class="login" id="login">
+    <form id="form_login" method="post" onsubmit="return entrar()">
+      <a href="index.html">
+        <h1 class="titulo"><span class="style">Art</span>eliê<span class="style">.</span></h1>
+      </a>
+      <br><br><br><br>
+      
+      <input type="text" class="ipt" name="login_html" placeholder="Email/Usuário">
+      <br><br>
+
+      <input type="password" class="ipt" name="senha" placeholder="Senha">
+      <br><br>
+      <button id="btn_entrar">Entrar</button>
+      <br><br><br><br>
+      <h4>Ainda não é cadastrado?</h4>
+      <a href="cadastro.html"><h4 class="clique">Clique aqui</h4></a>
+  </form>
+
+  </div>
+
+</body>
+
+</html>
+
+<script>
+
+function entrar() {
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.nome_usuario_meuapp = json.nomeUsuario;
+                    sessionStorage.id_usuario_meuapp = json.idUsuario;
+
+                    window.location.href = 'minhaÁrea.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+</script>

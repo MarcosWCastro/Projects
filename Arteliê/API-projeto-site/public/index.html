@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="artelie.css">
+    <script src="artelie.s"></script>
+    <title>Arteliê</title>
+</head>
+
+<body>
+    <!-- HOME -->
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><span class="style">Art</span>eliê<span class="style">.</span></h1>
+            <ul class="navbar">
+                <li><a id="id_home" href="#home" onclick="home_click()">Home</a></li>
+                <li><a id="id_artistas" href="#artistas" onclick="artistas_click()">Artistas</a></li>
+                <li><a id="id_categoria" href="#categorias" onclick="categoria_click()">Categorias</a></li>
+                <li><a href="login.html">Minha Área</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="home" id="home">
+        <div class="perfil">
+            <h2><span class="style">|</span> Seja bem-vindo</h2>
+            <br><br>
+            <h1 class="destaque2">Uma nova forma de ver a arte</h1>
+            <h4>Somos a Arteliê, e temos como objetivo <br>
+                fazer com que a arte, esteja ao alcance de todas <br>
+                as pessoas.</h4>
+            <br>
+            <a href="https://newaccount1622326218521.freshdesk.com/support/tickets/new"><button class="fale_conosco">Fale conosco</button></a>
+        </div>
+        <div class="image"></div>
+    </div>
+    <div class="social">
+        <a href="https://www.instagram.com/marcoswcastros/"><img class="social_icon"
+                src="imagens/icons/instagram.png"></a>
+        <a href="https://api.whatsapp.com/send?phone=5511992329098"><img class="social_icon"
+                src="imagens/icons/whatsapp.png"></a>
+        <a href="https://www.facebook.com/marcos.castro.9484941/"><img class="social_icon"
+                src="imagens/icons/facebook.png"></a>
+    </div>
+
+    <!-- ARTISTAS -->
+    <div class="artista" id="artistas">
+        <div class="artistas1">
+            <a href="vangogh.html">
+                <div class="boxArtista"><img src="imagens/artistas/Vincent_van_Gogh.jpg" alt="">
+                    <h3><span class="destaq">Vincent Van Gogh</span><br>(1853-1890)</h3>
+                    <p>Vincent van Gogh foi um importante pintor holandês.</p>
+                </div>
+            </a>
+            <a href="michelangelo.html">
+                <div class="boxArtista"><img src="imagens/artistas/michelangelo.jpg" alt="">
+                    <h3><span class="destaq">Michelangelo</span><br>(1475-1564)</h3>
+                    <p>Leo foi um pintor, escultor e arquiteto. É um dos maiores representantes do Renascimento.</p>
+                </div>
+            </a>
+            <a href="frida.html">
+                <div class="boxArtista"><img src="imagens/artistas/frida.jpg" alt="">
+                    <h3><span class="destaq">Frida Kahlo</span><br>(1907-1954)</h3>
+                    <p>Frida Kahlo foi uma pintora mexicana conhecida por seus autorretratos</p>
+                </div>
+            </a>
+            <a href="monet.html">
+                <div class="boxArtista"><img src="imagens/artistas/Claude_Monet.jpg" alt="">
+                    <h3><span class="destaq">Claude Monet</span><br>(1840-1926)</h3>
+                    <p>Claude Monet foi um pintor francês, um dos mais importantes pintores da arte Impressionista.</p>
+                </div>
+            </a>
+        </div>
+        <div class="artistas2">
+            <a href="davinci.html">
+                <div class="boxArtista"><img src="imagens/artistas/leo.jpg" alt="">
+                    <h3><span class="destaq">Leonardo Da Vinci</span><br>(1452-1519)</h3>
+                    <p>Leonardo da Vinci foi um pintor italiano. O quadro "Mona Lisa" foi sua principal obra.</p>
+                </div>
+            </a>
+            <a href="rembrandt.html">
+                <div class="boxArtista"><img src="imagens/artistas/rembrandt.jpg" alt="">
+                    <h3><span class="destaq">Rembrandt</span><br>(1606-1669)</h3>
+                    <p>Rembrandt foi um dos mais importantes pintores do Barroco europeu.</p>
+                </div>
+            </a>
+            <a href="portinari.html">
+                <div class="boxArtista"><img src="imagens/artistas/Cândido_Portinari.jpg" alt="">
+                    <h3><span class="destaq">Cândido Portinari</span><br>(1903-1962)</h3>
+                    <p>Candido Portinari foi um pintor brasileiro, um dos principais nomes do Modernismo.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- CATEGORIAS -->
+    <div class="categoria" id="categorias">
+        <div class="container-categoria1">
+            <a href="renascentista.html">
+                <div class="categ1">
+                    <h3>Renascentista</h3>
+                </div>
+            </a>
+            <a href="barroco.html">
+                <div class="categ2">
+                    <h3>Barroco</h3>
+                </div>
+            </a>
+            <a href="cubismo.html">
+                <div class="categ3">
+                    <h3>Cubismo</h3>
+                </div>
+            </a>
+        </div>
+        <div class="container-categoria2">
+            <a href="popArt.html">
+                <div class="categ4">
+                    <h3>Pop Art</h3>
+                </div>
+            </a>
+            <a href="urbana.html">
+                <div class="categ5">
+                    <h3>Urbana</h3>
+                </div>
+            </a>
+            <a href="realismo.html">
+                <div class="categ6">
+                    <h3>Hiper-realismo</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    
+    window.onload = function home_click() {
+    document.getElementById("id_home").className = "destaque";
+    document.getElementById("id_artistas").className = "";
+    document.getElementById("id_categoria").className = "";
+}
+
+
+function home_click() {
+    document.getElementById("id_home").className = "destaque";
+    document.getElementById("id_artistas").className = "";
+    document.getElementById("id_categoria").className = "";
+}
+
+function artistas_click() {
+    document.getElementById("id_artistas").className = "destaque";
+    document.getElementById("id_categoria").className = "";
+    document.getElementById("id_home").className = "";
+    
+}
+
+function categoria_click() {
+    document.getElementById("id_categoria").className = "destaque";
+    document.getElementById("id_artistas").className = "";
+    document.getElementById("id_home").className = "";
+}
+
+</script>

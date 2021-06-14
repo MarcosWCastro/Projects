@@ -1,0 +1,94 @@
+body, html {
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 10px 5px 8px gray;
+    background-color: whitesmoke;
+    padding: 100px;
+    margin: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card2 {
+    border-radius: 20px;
+    box-shadow: 10px 5px 8px gray;
+    background-color: whitesmoke;
+    padding: 100px;
+    margin: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card3 {
+    border-radius: 20px;
+    box-shadow: 10px 5px 8px gray;
+    background-color: whitesmoke;
+    padding: 100px;
+    margin: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.help {
+    border-radius: 20px;
+    box-shadow: 10px 5px 8px gray;
+    background-color: whitesmoke;
+    padding: 100px;
+    margin: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    background-color: #d63031;
+    border: 2px solid #d63031;
+    border-bottom: 5px solid #cc5e5e;
+    border-right: 5px solid #cc5e5e;
+    width: 150px;
+    height: 70px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.card button {
+    background-color: #00b894;
+    border: 2px solid #00b894;
+    border-bottom: 5px solid #17997f;
+    border-right: 5px solid #17997f;
+    margin: 10px;
+}
+
+.card input {
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: 0.5px solid gray;
+    margin: 15px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.player {
+    margin: 10px;
+}
+
+.placar {
+    font-size: 60px;
+    margin: auto;
+}

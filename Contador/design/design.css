@@ -1,0 +1,59 @@
+body, html {
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+.container {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.titulo {
+    font-size: 3vmax;
+    font-weight: bold;
+    color: #21EB00;
+    margin-bottom: 20%;
+}
+
+.sub_titulo {
+    font-size: 2vmax;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+input {
+    outline: none;
+    width: 20%;
+    height: 70px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-style: oblique;
+    border: 2px solid #191A18;
+    border-radius: 20px;
+    background-color: #191A18;
+}
+
+.pontos {
+    margin: 5px;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+button {
+    margin-top: 30px;
+    width: 60%;
+    height: 70px;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: oblique;
+    border: 2px solid #21EB00;
+    border-radius: 20px;
+    background-color: #21EB00;
+    cursor: pointer;
+}

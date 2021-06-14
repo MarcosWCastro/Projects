@@ -1,0 +1,216 @@
+body, html {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.titulo {
+    margin-top: 10%;
+    font-size: 3vmax;
+    font-weight: bold;
+    color: #21EB00;
+    margin-bottom: 5%;
+}
+
+.sub_titulo {
+    font-size: 2vmax;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+input {
+    outline: none;
+    width: 6%;
+    height: 70px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-style: oblique;
+    border: 2px solid #191A18;
+    border-radius: 20px;
+    background-color: #191A18;
+}
+
+.pontos {
+    margin: 5px;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+button {
+    margin-top: 30px;
+    width: 22%;
+    height: 70px;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: oblique;
+    border: 2px solid #21EB00;
+    border-radius: 20px;
+    background-color: #21EB00;
+    cursor: pointer;
+}
+
+/* contador */
+
+.corpo_contador {
+    margin-bottom: 23%;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 12%;
+}
+
+.cont {
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    float: left;
+}
+
+.cont p {
+    margin: 10px;
+    color: #21EB00;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.restart {
+    margin: 10px;
+    width: 80px;
+    display: flex;
+    justify-content: right;
+    float: right;
+    background-color: #21EB00;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 20px 0px 20px;
+    color: black;
+}
+
+.restart:hover {
+    cursor: pointer;
+}
+
+.titulo2 {
+    color: #191A18;
+    font-size: 80px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.horario {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 100px;
+}
+
+.numero {
+    position: relative;
+    font-size: 130px;
+    margin: 30px;
+    width: 200px;
+}
+
+.num {
+    position: relative;
+}
+
+.legenda {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: #21EB00;
+}
+
+@media screen and (max-width: 400px) {
+    
+    .header {
+        width: 100%;
+    }
+    
+    .cont {
+        width: 40%;
+        display: flex;
+        justify-content: left;
+        float: left;
+    }
+    
+    .cont p {
+        margin: 10px;
+        color: #21EB00;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .restart {
+        margin: 5px;
+        width: 80px;
+        display: flex;
+        justify-content: right;
+        float: right;
+        background-color: #21EB00;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0px 5px 0px 0px;
+        color: black;
+    }
+
+    .restart p {
+        margin: 5px;
+    }
+    
+    .restart:hover {
+        cursor: pointer;
+    }
+    
+    .titulo {
+        color: #191A18;
+        font-size: 50px;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .horario {
+        display: flex;
+        justify-content: center;
+        color: whitesmoke;
+        font-size: 100px;
+    }
+    
+    .numero {
+        font-size: 50px;
+        margin: 20px;
+    }
+    
+    .legenda {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        color: #21EB00;
+    }
+}

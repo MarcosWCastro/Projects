@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="cruzadinha.css">
+    <script src="cruzadinha.js"></script>
+</head>
+
+<style>
+    html,
+    body {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #a29bfe;
+        overflow: hidden;
+        zoom: 85%;
+    }
+
+    .container {
+        padding: 0px 40px 0px 40px;
+    }
+
+    input {
+        font-weight: 800;
+    }
+
+    button {
+        background-color: rgb(32, 167, 32);
+        color: white;
+        border: 1px solid rgb(32, 167, 32);
+        border-radius: 5px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 30px;
+    }
+
+    td {
+        height: 30px;
+        width: 30px;
+    }
+
+    #caixa_esq {
+        float: left;
+    }
+
+    #caixa_dir {
+        float: left;
+        clear: left;
+    }
+
+    #caixa_dir ::-webkit-scrollbar {
+        background-color: #a29bfe;
+        color: #a29bfe;
+        width: 10px;
+    }
+
+    #caixa_dir ::-webkit-scrollbar-thumb {
+        background: #6c5ce7;
+        border-radius: 15px;
+        width: 2px;
+    }
+
+    .butt {
+        height: 30px;
+        width: 107px;
+        border-radius: 10px;
+        background-color: rgb(32, 167, 32);
+        border: 1px solid rgb(32, 167, 32);
+        color: white;
+    }
+
+    .butt:hover {
+        cursor: pointer;
+    }
+
+    #jogo {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: 1px solid #6c5ce7;
+    }
+
+    .inputBox {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .questoes {
+        overflow-y: scroll;
+        height: 820px;
+        width: 370px;
+        margin: 90px 40px 100px 40px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <table class="botoes">
+            <tr>
+                <td><a href="minhaÁrea.html"><input class="butt" type="button" value="Minha Área"></a>
+                </td>
+                <td><input class="butt" type="submit" value="Recomeçar" onclick="recomecar()">
+                </td>
+                <td><input class="butt" type="submit" value="Checar" onclick="checar()">
+                </td>
+                <td><input class="butt" type="submit" value="Perguntas" onclick="perguntas()">
+                </td>
+                <td><input class="butt" type="submit" value="Dicas" onclick="dicas()"></td>
+            </tr>
+        </table>
+        <div id="caixa_esq">
+            <table id="jogo">
+                <tbody>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp2">2▼</span></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp1">1►</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="1">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="2">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="3">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="4">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="5">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp4">4▼</span></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp5">5▼</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="6">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp6">6▼</span></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp3">3►</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="7">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="8">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="9">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="10">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="11">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="12">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="13">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="14">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="15">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="16">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="17">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="18">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="19">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="20">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="21">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="22">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="23">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp7">7▼</span></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp8">8►</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="24">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="25">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="26">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="27">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp9">9▼</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="28">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp10">10▼</span></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp11">11▼</span></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="29">
+                        </td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp12">12▼</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="30">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="31">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp13">13►</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="32">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="33">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="34">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="35">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="36">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="37">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="38">
+                        </td>
+                        <td style="background-color: white;">-</td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="39">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="40">
+                        </td>
+                        <td style="background-color: white;">-</td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="41">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="42">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="43">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="44">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="45">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="46">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="47">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="48">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="49">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="50">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="51">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="52">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="53">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp14">14▼</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="54">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="55">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="56">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="57">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="58">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="59">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="60">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="61">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: white;">-</td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp15">15►</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="62">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="63">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="64">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="65">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="66">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="67">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="68">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="69">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="70">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"><span style="color: white;" id="sp16">16►</span></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="71">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="72">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="73">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="74">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="75">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="76">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="77">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="78">
+                        </td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="79">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="80">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="81">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="82">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td><input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" id="83">
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        </td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                        <td style="background-color: #6c5ce7;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div id="caixa_dir">
+
+
+        <div class="questoes" id="id_questoes" style="display: none;">
+            <h4>1. Material usado na tela da maioria das pinturas atuais.<button onclick="resp1()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>2. Material usado na tela da maioria das pinturas antigas.<button onclick="resp2()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>3. Categoria que marcou um período de renascimento da arte.<button onclick="resp3()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>4. Sigla do estado onde nasceu Djavan, um dos maiores da MPB.<button onclick="resp4()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>5. Qual termo é um acrónimo para Eletronic Dance Music?<button onclick="resp5()">Checar
+                    resposta</button>
+            </h4>
+            <hr>
+            <h4>6. Qual o principal material para pinturas em tela?<button onclick="resp6()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>7. Lugar onde podemos consumir artes audio-visuais, como filmes.<button onclick="resp7()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>8. Tipo de arte onde usuário consome por meio da audição.<button onclick="resp8()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>9. Sigla do estado onde nasceu Alceu Valença, um dos grandes nomes da música nordestina.<button
+                    onclick="resp9()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>10. Qual o aparelho que tens em sua casa, que serve para consumir qualquer tipo de arte
+                audio-visual?<button onclick="resp10()">Checar resposta</button></h4>
+            <hr>
+            <h4>11. Personagem histórico esculpido por Michelangelo.<button onclick="resp11()">Checar resposta</button>
+            </h4>
+            <hr>
+            <h4>12. Tipo de tinta que Mona Lisa, A Noite Estrelada, Guernica e O Nascimento de Vênus têm em
+                comum.<button onclick="resp12()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>13. Quem foi Crátinos?<button onclick="resp13()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>14. Quem pintou "Guernica" em 1937?<button onclick="resp14()">Checar resposta</button></h4>
+            <hr>
+            <h4>15. Aleijadinho, Pedro Américo, Tarsila do Amaral eram...<button onclick="resp15()">Checar
+                    resposta</button></h4>
+            <hr>
+            <h4>16. Qual nome se dá a elaboração de uma obra tendo outra como base?<button onclick="resp16()">Checar
+                    resposta</button></h4>
+            <hr>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function perguntas() {
+        id_questoes.style.display = 'block';
+
+    }
+
+    function recomecar() {
+        location.reload();
+
+    }
+
+    function dicas() {
+        document.getElementById('1').value = 'p'
+        document.getElementById('7').value = 'r'
+        document.getElementById('11').value = 's'
+        document.getElementById('23').value = 'i'
+        document.getElementById('34').value = 't'
+        document.getElementById('38').value = 'a'
+        document.getElementById('42').value = 't'
+        document.getElementById('18').value = 't'
+        document.getElementById('52').value = 'n'
+        document.getElementById('55').value = 't'
+        document.getElementById('59').value = 'i'
+        document.getElementById('64').value = 't'
+        document.getElementById('69').value = 's'
+        document.getElementById('75').value = 'i'
+    }
+
+    function resp1() {
+        var id1 = document.getElementById("1").value;
+        var id2 = document.getElementById("2").value;
+        var id3 = document.getElementById("3").value;
+        var id4 = document.getElementById("4").value;
+        var id5 = document.getElementById("5").value;
+        if (id1 == 'p' && id2 == 'a' && id3 == 'p' && id4 == 'e' && id5 == 'l') {
+            alert('Certa resposta :)')
+            sp1.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp1.style.color = "red";
+        }
+
+
+    }
+
+    function resp2() {
+        var id3 = document.getElementById("3").value;
+        var id6 = document.getElementById("6").value;
+        var id14 = document.getElementById("14").value;
+        var id22 = document.getElementById("22").value;
+        if (id3 == 'p' && id6 == 'a' && id14 == 'n' && id22 == 'o') {
+            alert('Certa resposta :)')
+            sp2.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp2.style.color = "red";
+        }
+    }
+
+    function resp3() {
+        var id7 = document.getElementById("7").value;
+        var id8 = document.getElementById("8").value;
+        var id9 = document.getElementById("9").value;
+        var id10 = document.getElementById("10").value;
+        var id11 = document.getElementById("11").value;
+        var id12 = document.getElementById("12").value;
+        var id13 = document.getElementById("13").value;
+        var id14 = document.getElementById("14").value;
+        var id15 = document.getElementById("15").value;
+        var id16 = document.getElementById("16").value;
+        var id17 = document.getElementById("17").value;
+        var id18 = document.getElementById("18").value;
+        var id19 = document.getElementById("19").value;
+        if (id7 == 'r' && id8 == 'e' && id9 == 'n' && id10 == 'a' && id11 == 's' && id12 == 'c' && id13 == 'e' &&
+            id14 == 'n' && id15 == 't' && id16 == 'i' && id17 == 's' && id18 == 't' && id19 == 'a') {
+            alert('Certa resposta :)')
+            sp3.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp3.style.color = "red";
+        }
+    }
+
+    function resp4() {
+        var id10 = document.getElementById("10").value;
+        var id20 = document.getElementById("20").value;
+        if (id10 == 'a' && id20 == 'l') {
+            alert('Certa resposta :)')
+            sp4.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp4.style.color = "red";
+        }
+    }
+
+    function resp5() {
+        var id13 = document.getElementById("13").value;
+        var id21 = document.getElementById("21").value;
+        var id26 = document.getElementById("26").value;
+        if (id13 == 'e' && id21 == 'd' && id26 == 'm') {
+            alert('Certa resposta :)')
+            sp5.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp5.style.color = "red";
+        }
+    }
+
+    function resp6() {
+        var id18 = document.getElementById("18").value;
+        var id23 = document.getElementById("23").value;
+        var id27 = document.getElementById("27").value;
+        var id29 = document.getElementById("29").value;
+        var id41 = document.getElementById("41").value;
+        if (id18 == 't' && id23 == 'i' && id27 == 'n' && id29 == 't' && id41 == 'a') {
+            alert('Certa resposta :)')
+            sp6.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp6.style.color = "red";
+        }
+    }
+
+    function resp7() {
+        var id28 = document.getElementById("28").value;
+        var id31 = document.getElementById("31").value;
+        var id44 = document.getElementById("44").value;
+        var id50 = document.getElementById("50").value;
+        var id53 = document.getElementById("53").value;
+        var id56 = document.getElementById("56").value;
+        if (id28 == 'c' && id31 == 'i' && id44 == 'n' && id50 == 'e' && id53 == 'm' && id56 == 'a') {
+            alert('Certa resposta :)')
+            sp7.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp7.style.color = "red";
+        }
+    }
+
+    function resp8() {
+        var id24 = document.getElementById("24").value;
+        var id25 = document.getElementById("25").value;
+        var id26 = document.getElementById("26").value;
+        if (id24 == 's' && id25 == 'o' && id26 == 'm') {
+            alert('Certa resposta :)')
+            sp8.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp8.style.color = "red";
+        }
+    }
+
+    function resp9() {
+        var id30 = document.getElementById("30").value;
+        var id43 = document.getElementById("43").value;
+        if (id30 == 'p' && id43 == 'e') {
+            alert('Certa resposta :)')
+            sp9.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp9.style.color = "red";
+        }
+    }
+
+    function resp10() {
+        var id37 = document.getElementById("37").value;
+        var id47 = document.getElementById("47").value;
+        if (id37 == 't' && id47 == 'v') {
+            alert('Certa resposta :)')
+            sp10.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp10.style.color = "red";
+        }
+    }
+
+    function resp11() {
+        var id39 = document.getElementById("39").value;
+        var id48 = document.getElementById("48").value;
+        var id51 = document.getElementById("51").value;
+        var id54 = document.getElementById("54").value;
+        if (id39 == 'd' && id48 == 'a' && id51 == 'v' && id54 == 'i') {
+            alert('Certa resposta :)')
+            sp11.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp11.style.color = "red";
+        }
+    }
+
+    function resp12() {
+        var id42 = document.getElementById("42").value;
+        var id49 = document.getElementById("49").value;
+        var id52 = document.getElementById("52").value;
+        var id55 = document.getElementById("55").value;
+        var id58 = document.getElementById("58").value;
+        var id60 = document.getElementById("60").value;
+        var id67 = document.getElementById("67").value;
+        var id73 = document.getElementById("73").value;
+        var id81 = document.getElementById("81").value;
+        var id83 = document.getElementById("83").value;
+        if (id42 == 't' && id49 == 'i' && id52 == 'n' && id55 == 't' && id58 == 'a' && id60 == 's' &&
+            id67 == 'o' && id73 == 'l' && id81 == 'e' && id83 == 'o') {
+            alert('Certa resposta :)')
+            sp12.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp12.style.color = "red";
+        }
+    }
+
+    function resp13() {
+        var id32 = document.getElementById("32").value;
+        var id33 = document.getElementById("33").value;
+        var id34 = document.getElementById("34").value;
+        var id35 = document.getElementById("35").value;
+        var id36 = document.getElementById("36").value;
+        var id37 = document.getElementById("37").value;
+        var id38 = document.getElementById("38").value;
+        var id39 = document.getElementById("39").value;
+        var id40 = document.getElementById("40").value;
+        var id41 = document.getElementById("41").value;
+        var id42 = document.getElementById("42").value;
+        var id43 = document.getElementById("43").value;
+        var id44 = document.getElementById("44").value;
+        var id45 = document.getElementById("45").value;
+        var id46 = document.getElementById("46").value;
+        if (id32 == 'a' && id33 == 'r' && id34 == 't' && id35 == 'i' && id36 == 's' && id37 == 't' && id38 == 'a' &&
+            id39 == 'd' && id40 == 'e' && id41 == 'a' && id42 == 't' && id43 == 'e' && id44 == 'n' && id45 == 'a' &&
+            id46 == 's') {
+            alert('Certa resposta :)')
+            sp13.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp13.style.color = "red";
+        }
+    }
+
+    function resp14() {
+        var id57 = document.getElementById("57").value;
+        var id59 = document.getElementById("59").value;
+        var id61 = document.getElementById("61").value;
+        var id62 = document.getElementById("62").value;
+        var id70 = document.getElementById("70").value;
+        var id80 = document.getElementById("80").value;
+        var id82 = document.getElementById("82").value;
+        if (id57 == 'p' && id59 == 'i' && id61 == 'c' && id62 == 'a' && id70 == 's' && id80 == 's' && id82 == 'o') {
+            alert('Certa resposta :)')
+            sp14.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp14.style.color = "red";
+        }
+    }
+
+    function resp15() {
+        var id62 = document.getElementById("62").value;
+        var id63 = document.getElementById("63").value;
+        var id64 = document.getElementById("64").value;
+        var id65 = document.getElementById("65").value;
+        var id66 = document.getElementById("66").value;
+        var id67 = document.getElementById("67").value;
+        var id68 = document.getElementById("68").value;
+        var id69 = document.getElementById("69").value;
+        if (id62 == 'a' && id63 == 'r' && id64 == 't' && id65 == 'e' && id66 == 's' && id67 == 'o' && id68 == 'e' &&
+            id69 == 's') {
+            alert('Certa resposta :)')
+            sp15.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp15.style.color = "red";
+        }
+    }
+
+    function resp16() {
+        var id71 = document.getElementById("71").value;
+        var id72 = document.getElementById("72").value;
+        var id73 = document.getElementById("73").value;
+        var id74 = document.getElementById("74").value;
+        var id75 = document.getElementById("75").value;
+        var id76 = document.getElementById("76").value;
+        var id77 = document.getElementById("77").value;
+        var id78 = document.getElementById("78").value;
+        var id79 = document.getElementById("79").value;
+        if (id71 == 'r' && id72 == 'e' && id73 == 'l' && id74 == 'e' && id75 == 'i' && id76 == 't' && id77 == 'u' &&
+            id78 == 'r' && id79 == 'a') {
+            alert('Certa resposta :)')
+            sp16.style.color = "#55efc4"
+        } else {
+            alert('A resposta está errada :(')
+            sp16.style.color = "red";
+        }
+    }
+
+    function checar() {
+        window.alert = function () {};
+        resp1()
+        resp2()
+        resp3()
+        resp4()
+        resp5()
+        resp6()
+        resp7()
+        resp8()
+        resp9()
+        resp10()
+        resp11()
+        resp12()
+        resp13()
+        resp14()
+        resp15()
+        resp16()
+
+    }
+</script>
